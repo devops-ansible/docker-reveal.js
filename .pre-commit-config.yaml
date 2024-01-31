@@ -1,0 +1,21 @@
+repos:
+
+- repo: local
+  hooks:
+  - id: update-pre-commit
+    # Keep pre-commits up to date:
+    # Will BREAK commit when versions did change, so commit has to be re-initiated.
+    name: update all hooks to latest for no more breaking GitHub workflow runs
+    language: system
+    entry: pre-commit
+    args:
+      - autoupdate
+    always_run: true
+    pass_filenames: false
+    fail_fast: true
+
+- repo: https://github.com/shellcheck-py/shellcheck-py
+  rev: v0.9.0.6
+  hooks:
+  - id: shellcheck
+    # args: ["--severity=warning"]  # Optionally only show errors and warnings
