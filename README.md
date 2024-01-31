@@ -26,3 +26,7 @@ The variable `NODE_ENV` is not used – since `reveal.js` is only using `devDepe
 * `package.json`, `package-lock.json` – the dependency installation files for `reveal.js` ... Installation is done on Image build process, so afterwards in production they are no longer needed.
 * `test` – test cases that can be run to check if everything is working as expected. They are not necessary for running the product
 * `examples`, `demo.html` – demonstration presentations which are not necessary for production
+
+## last built
+
+0000-00-00 00:00:00
