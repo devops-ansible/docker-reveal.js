@@ -79,6 +79,9 @@ jobs:
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
+      - name: Last Built
+        run: sed -i -E "s/^[0-9]{4}-[0-9]{2}-[0-9]{2}\s+[0-9]{2}:[0-9]{2}:[0-9]{2}$/$( date +"%Y-%m-%d %T" )/" ./git/README.md
+
       - name: Commit last built information
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
